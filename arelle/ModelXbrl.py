@@ -1208,9 +1208,10 @@ class ModelXbrl:
         if messageCode == "asrtNoLog":
             self.errors.append(args["assertionResults"])
             return
-        if (messageCode and
-              (not logger.messageCodeFilter or logger.messageCodeFilter.match(messageCode)) and
-              (not logger.messageLevelFilter or logger.messageLevelFilter.match(level.lower()))):
+        if (messageCode)
+#         and
+#               (not logger.messageCodeFilter or logger.messageCodeFilter.match(messageCode)) and
+#               (not logger.messageLevelFilter or logger.messageLevelFilter.match(level.lower()))):
             # note that plugin Logging.Message.Parameters may rewrite messageCode which now occurs after filtering on messageCode
             messageCode, logArgs, extras = self.logArguments(messageCode, msg, args)
             numericLevel = logging._checkLevel(level)  #type: ignore[attr-defined]
