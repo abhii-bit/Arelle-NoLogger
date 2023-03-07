@@ -1208,7 +1208,7 @@ class ModelXbrl:
         if messageCode == "asrtNoLog":
             self.errors.append(args["assertionResults"])
             return
-        if (messageCode)
+        if (messageCode):
 #         and
 #               (not logger.messageCodeFilter or logger.messageCodeFilter.match(messageCode)) and
 #               (not logger.messageLevelFilter or logger.messageLevelFilter.match(level.lower()))):
